@@ -16,3 +16,7 @@ nix run github:nicolaschan/lazytcp -- \
   --debounce-time-millis 10000
 ```
 
+# Roadmap
+[x] Generic child process downstream
+[ ] Minecraft downstream with server list support
+[ ] QEMU downstream with suspend support
