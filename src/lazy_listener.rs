@@ -1,7 +1,7 @@
 use std::sync::Arc;
 
 use tokio::{io, net::TcpListener};
-use tracing::{debug, error};
+use tracing::{debug, error, info};
 
 use crate::downstream_registry::DownstreamRegistry;
 
@@ -13,6 +13,7 @@ pub struct LazyListener<R: DownstreamRegistry> {
 impl<R: DownstreamRegistry> LazyListener<R> {
     pub async fn new(listen_addr: String, registry: R) -> Self {
         let listener = TcpListener::bind(&listen_addr).await.unwrap();
+        info!("Listening at {:?}", listen_addr);
         LazyListener {
             listener,
             registry: Arc::new(registry),
