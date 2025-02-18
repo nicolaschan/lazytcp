@@ -4,7 +4,7 @@
 
 ## Usage
 
-The motivating use-case is starting a Minecraft server on-demand. This way it can consume almost no resources until needed. Since it operates at the TCP level, pretty much any Minecraft server version and type (vanilla, modded, Paper, plugins, etc.) should work. 
+The motivating use-case is starting a Minecraft server on-demand. This way it consumes almost no resources until needed. Since it operates at the TCP level, pretty much any Minecraft server version and type (vanilla, modded, Paper, plugins, etc.) should work. 
 
 Depending on your server, you may need to change the following options:
 - `--stdout-ready-pattern` a substring of a stdout log line to detect when the server is ready
