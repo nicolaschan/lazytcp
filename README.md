@@ -16,6 +16,12 @@ nix run github:nicolaschan/lazytcp -- \
   --debounce-time-millis 10000
 ```
 
+There is also a Docker image based off of [itzg/minecraft-server](https://github.com/itzg/docker-minecraft-server) that can be used to run lazytcp in a container.
+
+```bash
+docker run -it -p 25565:25565 -e VERSION=1.21.4 -e EULA=true -v mcdata:/data ghcr.io/nicolaschan/lazytcp-minecraft
+```
+
 # Roadmap
 [x] Generic child process downstream
 [ ] Minecraft downstream with server list support

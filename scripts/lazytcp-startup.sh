@@ -7,7 +7,7 @@ fi
 
 if [[ -z "$DEBOUNCE_MILLIS" ]]; then
     echo "DEBOUNCE_MILLIS is not set, default to 60000"
-    DEBOUNCE_TIME_MILLIS=60000
+    DEBOUNCE_MILLIS=60000
 fi
 
 ORIGINAL_SERVER_PORT="$SERVER_PORT"
