@@ -36,6 +36,6 @@ docker run -it -p 25565:25565 \
 ```
 
 ## Roadmap
-[x] Generic child process downstream
-[ ] Minecraft downstream with server list support
-[ ] QEMU downstream with suspend support
+- [x] Generic child process downstream
+- [ ] Minecraft downstream with server list support
+- [ ] QEMU downstream with suspend support
