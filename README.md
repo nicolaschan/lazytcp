@@ -1,6 +1,6 @@
 # lazytcp 💤
 
-> Start TCP server on-demand when connections are established
+> Start a TCP server on-demand when connections are established
 
 ## Usage
 
