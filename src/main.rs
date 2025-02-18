@@ -1,9 +1,8 @@
 use anyhow::Result;
 
 use clap::Parser;
-use downstream_registry::ChildProcessRegistry;
 use lazy_listener::LazyListener;
-use minecraft::CachingRegistry;
+use registry::{ChildProcessRegistry, MinecraftRegistry};
 
 #[derive(Parser, Debug)]
 struct Args {
@@ -26,9 +25,8 @@ struct Args {
     debounce_time_millis: u64,
 }
 
-mod downstream_registry;
 mod lazy_listener;
-mod minecraft;
+mod registry;
 
 #[tokio::main]
 async fn main() -> Result<()> {
@@ -43,7 +41,7 @@ async fn main() -> Result<()> {
         args.shutdown_stdin_command + "\n",
         std::time::Duration::from_millis(args.debounce_time_millis),
     );
-    let registry = CachingRegistry::new(registry);
+    let registry = MinecraftRegistry::new(registry);
 
     let listener = LazyListener::new(args.listen_addr.clone(), registry).await;
     listener.run().await;

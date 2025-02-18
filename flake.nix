@@ -31,14 +31,6 @@
             rustToolchain
             rust-analyzer
             cargo-edit
-            gcc
-            alsa-lib
-            cmake
-            libopus
-            automake
-            autoconf
-            perl
-            pkg-config
           ];
         };
 

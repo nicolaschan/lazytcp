@@ -7,7 +7,7 @@ use tokio::{
 };
 use tracing::{debug, warn};
 
-use crate::{downstream_registry::DownstreamRegistry, minecraft::varint::read_varint};
+use crate::registry::{minecraft::varint::read_varint, DownstreamRegistry};
 
 pub struct CachingRegistry<R: DownstreamRegistry> {
     cache: Mutex<HashMap<Vec<u8>, Vec<u8>>>,

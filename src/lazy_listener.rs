@@ -3,7 +3,7 @@ use std::sync::Arc;
 use tokio::{io, net::TcpListener};
 use tracing::{debug, error, info};
 
-use crate::downstream_registry::DownstreamRegistry;
+use crate::registry::DownstreamRegistry;
 
 pub struct LazyListener<R: DownstreamRegistry> {
     listener: TcpListener,
